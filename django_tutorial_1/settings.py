@@ -26,7 +26,8 @@ SECRET_KEY = 'o+^ylz7(2vq3772c396sfu#@h3b!=@si(q!b_gboh1f7(z#qg('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["django-tutorial-1-madenden.c9users.io"]
+ALLOWED_HOSTS = [os.environ.get("C9_HOSTNAME"),
+                os.environ.get("HOSTNAME")]
 
 
 # Application definition
